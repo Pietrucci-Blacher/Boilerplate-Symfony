@@ -1,5 +1,4 @@
 {
-<<<<<<< HEAD
   "name": "symfony/website-skeleton",
   "type": "project",
   "license": "MIT",
@@ -53,68 +52,16 @@
       "composer/package-versions-deprecated": true,
       "symfony/flex": true,
       "symfony/runtime": true
-=======
-    "name": "symfony/skeleton",
-    "type": "project",
-    "license": "proprietary",
-    "description": "Project description",
-    "minimum-stability": "dev",
-    "require": {
-        "php": "^7.1",
-        "symfony/flex": "1.0.x-dev",
-        "symfony/framework-bundle": "3.3.x-dev",
-        "symfony/yaml": "3.3.x-dev"
->>>>>>> c12debb (bumped min version to 7.1)
     },
     "optimize-autoloader": true,
     "preferred-install": {
       "*": "dist"
     },
-<<<<<<< HEAD
     "sort-packages": true
   },
   "autoload": {
     "psr-4": {
       "App\\": "src/"
-=======
-    "config": {
-        "platform": {
-            "php": "7.1"
-        },
-        "preferred-install": {
-            "*": "dist"
-        },
-        "sort-packages": true
-    },
-    "autoload": {
-        "psr-4": {
-            "App\\": "src/"
-        }
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "App\\Tests\\": "tests/"
-        }
-    },
-    "scripts": {
-        "auto-scripts": [
-        ],
-        "post-install-cmd": [
-            "@auto-scripts"
-        ],
-        "post-update-cmd": [
-            "@auto-scripts"
-        ]
-    },
-    "conflict": {
-        "symfony/symfony": "<3.3",
-        "symfony/framework-bundle": "<3.3",
-        "symfony/twig-bundle": "<3.3",
-        "symfony/debug": "<3.3"
-    },
-    "extra": {
-        "flex-id": ""
->>>>>>> d97e8a3 (Move flex-id to extra settings)
     }
   },
   "autoload-dev": {
