@@ -28,6 +28,7 @@ RUN apk add --no-cache \
 	;
 =======
 		icu-libs \
+                make \
 		zlib
 >>>>>>> df6286b (Upgrade the Docker setup and dependencies)
 
