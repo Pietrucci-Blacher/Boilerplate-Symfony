@@ -22,15 +22,9 @@ RUN apk add --no-cache \
 		file \
 		gettext \
 		git \
-<<<<<<< HEAD
         linux-headers \
         npm \
 	;
-=======
-		icu-libs \
-                make \
-		zlib
->>>>>>> df6286b (Upgrade the Docker setup and dependencies)
 
 RUN set -eux; \
 	install-php-extensions \
@@ -40,7 +34,6 @@ RUN set -eux; \
 		zip \
 	;
 
-<<<<<<< HEAD
 ###> recipes ###
 ###> doctrine/doctrine-bundle ###
 RUN apk add --no-cache --virtual .pgsql-deps postgresql-dev; \
@@ -55,19 +48,6 @@ COPY --link --chmod=755 frankenphp/docker-entrypoint.sh /usr/local/bin/docker-en
 COPY --link frankenphp/Caddyfile /etc/caddy/Caddyfile
 
 ENTRYPOINT ["docker-entrypoint"]
-=======
-COPY docker/app/php.ini /usr/local/etc/php/php.ini
-
-COPY docker/app/install-composer.sh /usr/local/bin/docker-app-install-composer
-RUN chmod +x /usr/local/bin/docker-app-install-composer
-
-RUN set -xe \
-	&& apk add --no-cache --virtual .fetch-deps \
-		openssl \
-	&& docker-app-install-composer \
-	&& mv composer.phar /usr/local/bin/composer \
-	&& apk del .fetch-deps
->>>>>>> df6286b (Upgrade the Docker setup and dependencies)
 
 # https://getcomposer.org/doc/03-cli.md#composer-allow-superuser
 ENV COMPOSER_ALLOW_SUPERUSER=1
@@ -75,12 +55,8 @@ ENV PATH="${PATH}:/root/.composer/vendor/bin"
 
 COPY --from=composer_upstream --link /composer /usr/bin/composer
 
-<<<<<<< HEAD
 HEALTHCHECK --start-period=60s CMD curl -f http://localhost:2019/metrics || exit 1
 CMD [ "frankenphp", "run", "--config", "/etc/caddy/Caddyfile" ]
-=======
-WORKDIR /srv/app
->>>>>>> df6286b (Upgrade the Docker setup and dependencies)
 
 # Dev FrankenPHP image
 FROM frankenphp_base AS frankenphp_dev
@@ -95,7 +71,6 @@ RUN set -eux; \
 		xdebug \
 	;
 
-<<<<<<< HEAD
 COPY --link frankenphp/conf.d/app.dev.ini $PHP_INI_DIR/conf.d/
 
 CMD [ "frankenphp", "run", "--config", "/etc/caddy/Caddyfile", "--watch" ]
@@ -126,10 +101,3 @@ RUN set -eux; \
 	composer dump-env prod; \
 	composer run-script --no-dev post-install-cmd; \
 	chmod +x bin/console; sync;
-=======
-COPY docker/app/docker-entrypoint.sh /usr/local/bin/docker-app-entrypoint
-RUN chmod +x /usr/local/bin/docker-app-entrypoint
-
-ENTRYPOINT ["docker-app-entrypoint"]
-CMD ["php-fpm"]
->>>>>>> df6286b (Upgrade the Docker setup and dependencies)
