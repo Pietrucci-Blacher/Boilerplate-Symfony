@@ -1,6 +1,5 @@
 #syntax=docker/dockerfile:1.7
 
-<<<<<<< HEAD
 # Versions
 FROM dunglas/frankenphp:1-alpine AS frankenphp_upstream
 FROM composer/composer:2-bin AS composer_upstream
@@ -30,22 +29,6 @@ RUN apk add --no-cache \
 RUN set -eux; \
 	install-php-extensions \
 		apcu \
-=======
-WORKDIR /srv/app
-
-RUN apk add --no-cache --virtual .persistent-deps \
-		git \
-		icu-libs \
-		zlib
-
-ENV APCU_VERSION 5.1.8
-RUN set -xe \
-	&& apk add --no-cache --virtual .build-deps \
-		$PHPIZE_DEPS \
-		icu-dev \
-		zlib-dev \
-	&& docker-php-ext-install \
->>>>>>> 0f965c4 (Use composer create-project)
 		intl \
 		opcache \
 		zip \
@@ -70,41 +53,23 @@ ENTRYPOINT ["docker-entrypoint"]
 ENV COMPOSER_ALLOW_SUPERUSER=1
 ENV PATH="${PATH}:/root/.composer/vendor/bin"
 
-<<<<<<< HEAD
 COPY --from=composer_upstream --link /composer /usr/bin/composer
-=======
-# Use prestissimo to speed up builds
-RUN composer global require "hirak/prestissimo:^0.3" --prefer-dist --no-progress --no-suggest --optimize-autoloader --classmap-authoritative  --no-interaction
->>>>>>> 0f965c4 (Use composer create-project)
 
 HEALTHCHECK --start-period=60s CMD curl -f http://localhost:2019/metrics || exit 1
 CMD [ "frankenphp", "run", "--config", "/etc/caddy/Caddyfile" ]
 
-<<<<<<< HEAD
 # Dev FrankenPHP image
 FROM frankenphp_base AS frankenphp_dev
 
 ENV APP_ENV=dev XDEBUG_MODE=off
 VOLUME /app/var/
-=======
-# Download the Symfony skeleton and leverage Docker cache layers
-ENV STABILITY stable
-RUN composer create-project "symfony/skeleton" . --stability=$STABILITY --prefer-dist --no-dev --no-progress --no-scripts --no-plugins --no-interaction
->>>>>>> 0f965c4 (Use composer create-project)
 
 RUN mv "$PHP_INI_DIR/php.ini-development" "$PHP_INI_DIR/php.ini"
 
-<<<<<<< HEAD
 RUN set -eux; \
 	install-php-extensions \
 		xdebug \
 	;
-=======
-RUN mkdir -p var/cache var/logs var/sessions \
-    && composer install --prefer-dist --no-dev --no-progress --no-suggest --classmap-authoritative --no-interaction \
-	&& composer clear-cache \
-	&& chown -R www-data var # Permissions hack because setfacl does not work on Mac and Windows
->>>>>>> 0f965c4 (Use composer create-project)
 
 COPY --link frankenphp/conf.d/app.dev.ini $PHP_INI_DIR/conf.d/
 
