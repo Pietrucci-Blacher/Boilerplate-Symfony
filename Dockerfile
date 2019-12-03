@@ -49,6 +49,12 @@ COPY --link frankenphp/Caddyfile /etc/caddy/Caddyfile
 
 ENTRYPOINT ["docker-entrypoint"]
 
+RUN set -eux; \
+	{ \
+		echo '[www]'; \
+		echo 'ping.path = /ping'; \
+	} | tee /usr/local/etc/php-fpm.d/docker-healthcheck.conf
+
 # https://getcomposer.org/doc/03-cli.md#composer-allow-superuser
 ENV COMPOSER_ALLOW_SUPERUSER=1
 ENV PATH="${PATH}:/root/.composer/vendor/bin"
