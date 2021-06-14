@@ -22,8 +22,12 @@ RUN apk add --no-cache \
 		file \
 		gettext \
 		git \
+<<<<<<< HEAD
         linux-headers \
         npm \
+=======
+		gnu-libiconv \
+>>>>>>> c99c188 (feat: allow to install the website skeleton (#152))
 	;
 
 RUN set -eux; \
