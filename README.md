@@ -22,6 +22,7 @@ Lister l'ensemble des commandes existances `docker compose exec php bin/console`
 Controller `docker compose exec php bin/console make:controller`
 =======
 * Production, development and CI ready
+* [Installation of extra Docker Compose services](docs/extra-services.md) with Symfony Flex
 * Automatic HTTPS (in dev and in prod!)
 * HTTP/2, HTTP/3 and [Preload](https://symfony.com/doc/current/web_link.html) support
 * Built-in [Mercure](https://symfony.com/doc/current/mercure.html) hub
