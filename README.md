@@ -17,20 +17,8 @@ A [Docker](https://www.docker.com/)-based installer and runtime for the [Symfony
 ## Commandes utiles
 Lister l'ensemble des commandes existances `docker compose exec php bin/console`
 
-<<<<<<< HEAD
 #### Création de fichier vierge
 Controller `docker compose exec php bin/console make:controller`
-=======
-* Production, development and CI ready
-* [Installation of extra Docker Compose services](docs/extra-services.md) with Symfony Flex
-* Automatic HTTPS (in dev and in prod!)
-* HTTP/2, HTTP/3 and [Preload](https://symfony.com/doc/current/web_link.html) support
-* Built-in [Mercure](https://symfony.com/doc/current/mercure.html) hub
-* [Vulcain](https://vulcain.rocks) support
-* Native [XDebug](docs/xdebug.md) integration
-* Just 2 services (PHP FPM and Caddy server)
-* Super-readable configuration
->>>>>>> e24b0d5 (Update README.md)
 
 FormType `docker compose exec php bin/console make:form`
 
@@ -47,10 +35,6 @@ Supprimer le cache du navigateur
 5. [Debugging with Xdebug](docs/xdebug.md)
 6. [Using a Makefile](docs/makefile.md)
 7. [Troubleshooting](docs/troubleshooting.md)
->>>>>>> e24b0d5 (Update README.md)
-
-`docker compose exec php bin/console cache:clear`
-
 `docker compose exec php bin/console c:c`
 
 Voir les routes actives 
@@ -58,7 +42,6 @@ Voir les routes actives
 `docker compose exec php bin/console debug:router`
 
 ## Gestion des routes
-[https://symfony.com/doc/current/routing.html](https://symfony.com/doc/current/routing.html)
 
 ## Autowiring & ParamConverter
 Autowiring [https://symfony.com/doc/current/service_container/autowiring.html](https://symfony.com/doc/current/service_container/autowiring.html)
