@@ -24,17 +24,10 @@ FormType `docker compose exec php bin/console make:form`
 
 CRUD `docker compose exec php bin/console make:crud`
 
-<<<<<<< HEAD
+
 #### Debug
 Supprimer le cache du navigateur 
-=======
-1. [Build options](docs/build.md)
-2. [Using Symfony Docker with an existing project](docs/existing-project.md)
-3. [Support for extra services](docs/extra-services.md)
-4. [Deploying in production](docs/production.md)
-5. [Debugging with Xdebug](docs/xdebug.md)
-6. [Using a Makefile](docs/makefile.md)
-7. [Troubleshooting](docs/troubleshooting.md)
+
 `docker compose exec php bin/console c:c`
 
 Voir les routes actives 
