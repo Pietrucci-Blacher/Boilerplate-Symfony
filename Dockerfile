@@ -16,8 +16,7 @@ FROM frankenphp_upstream AS frankenphp_base
 WORKDIR /app
 
 # php extensions installer: https://github.com/mlocati/docker-php-extension-installer
-ADD https://github.com/mlocati/docker-php-extension-installer/releases/latest/download/install-php-extensions /usr/local/bin/
-RUN chmod +x /usr/local/bin/install-php-extensions
+COPY --from=mlocati/php-extension-installer /usr/bin/install-php-extensions /usr/local/bin/
 
 # persistent / runtime deps
 # hadolint ignore=DL3018
