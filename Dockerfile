@@ -51,12 +51,21 @@ ENV COMPOSER_ALLOW_SUPERUSER=1
 
 ###> recipes ###
 ###> doctrine/doctrine-bundle ###
+<<<<<<< HEAD
 RUN apk add --no-cache --virtual .pgsql-deps postgresql-dev; \
 	docker-php-ext-install -j$(nproc) pdo_pgsql; \
 	apk add --no-cache --virtual .pgsql-rundeps so:libpq.so.5; \
 	apk del .pgsql-deps
+=======
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends postgresql-client libpq-dev && \
+    docker-php-ext-install -j$(nproc) pdo_pgsql && \
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists/*
+>>>>>>> 556668a (Init boilerplate)
 ###< doctrine/doctrine-bundle ###
 ###< recipes ###
+
 
 COPY --link frankenphp/conf.d/app.ini $PHP_INI_DIR/conf.d/
 COPY --link --chmod=755 frankenphp/docker-entrypoint.sh /usr/local/bin/docker-entrypoint
