@@ -13,7 +13,6 @@ use Gedmo\Mapping\Annotation\SortablePosition;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 use Symfony\Component\Validator\Constraints as Assert;
 use Symfony\Component\HttpFoundation\File\File;
-use Vich\UploaderBundle\Mapping\Annotation as Vich;
 
 #[ORM\Entity(repositoryClass: MissionRepository::class)]
 #[UniqueEntity(fields: ['name'])]
