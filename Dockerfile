@@ -9,36 +9,11 @@ FROM composer/composer:2-bin AS composer_upstream
 # https://docs.docker.com/develop/develop-images/multistage-build/#stop-at-a-specific-build-stage
 # https://docs.docker.com/compose/compose-file/#target
 
-<<<<<<< HEAD
 
 # Base FrankenPHP image
 FROM frankenphp_upstream AS frankenphp_base
 
 WORKDIR /app
-=======
-# Build Caddy with the Mercure and Vulcain modules
-# Temporary fix for https://github.com/dunglas/mercure/issues/770
-FROM caddy:2.7-builder-alpine AS app_caddy_builder
-
-RUN xcaddy build v2.6.4 \
-	--with github.com/dunglas/mercure/caddy \
-	--with github.com/dunglas/vulcain/caddy
-
-# Prod image
-FROM php:8.2-fpm-alpine AS app_php
-
-# Allow to use development versions of Symfony
-ARG STABILITY="stable"
-ENV STABILITY ${STABILITY}
-
-# Allow to select Symfony version
-ARG SYMFONY_VERSION=""
-ENV SYMFONY_VERSION ${SYMFONY_VERSION}
-
-ENV APP_ENV=prod
-
-WORKDIR /srv/app
->>>>>>> d05206b (refactor: simplify Dockerfile)
 
 # php extensions installer: https://github.com/mlocati/docker-php-extension-installer
 COPY --from=mlocati/php-extension-installer:latest --link /usr/bin/install-php-extensions /usr/local/bin/

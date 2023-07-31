@@ -24,17 +24,6 @@ FormType `docker compose exec php bin/console make:form`
 
 CRUD `docker compose exec php bin/console make:crud`
 
-<<<<<<< HEAD
-=======
-1. [Build options](docs/build.md)
-2. [Using Symfony Docker with an existing project](docs/existing-project.md)
-3. [Support for extra services](docs/extra-services.md)
-4. [Deploying in production](docs/production.md)
-5. [Debugging with Xdebug](docs/xdebug.md)
-6. [TLS Certificates](docs/tls.md)
-7. [Using a Makefile](docs/makefile.md)
-8. [Troubleshooting](docs/troubleshooting.md)
->>>>>>> e67a28f (feat: Allow local certificates to be used by Caddy)
 
 #### Debug
 Supprimer le cache du navigateur 
