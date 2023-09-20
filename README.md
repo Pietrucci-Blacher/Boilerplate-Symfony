@@ -1,6 +1,7 @@
 # Symfony Docker (PHP8 / Caddy / Postgresql)
 
-A [Docker](https://www.docker.com/)-based installer and runtime for the [Symfony](https://symfony.com) web framework, with full [HTTP/2](https://symfony.com/doc/current/weblink.html), HTTP/3 and HTTPS support.
+A [Docker](https://www.docker.com/)-based installer and runtime for the [Symfony](https://symfony.com) web framework,
+with [FrankenPHP](https://frankenphp.dev) and [Caddy](https://caddyserver.com/) inside!
 
 ![CI](https://github.com/dunglas/symfony-docker/workflows/CI/badge.svg)
 
