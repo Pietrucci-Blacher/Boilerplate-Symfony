@@ -16,4 +16,4 @@ jobs:
           source_repo: "https://github.com/dunglas/symfony-docker"
           source_branch: "main"
           destination_branch: "develop"
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.TOKEN }}
