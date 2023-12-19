@@ -46,8 +46,11 @@
 
 	vulcain
 
+<<<<<<< HEAD
 	{$CADDY_SERVER_EXTRA_DIRECTIVES}
 
+=======
+>>>>>>> 966fa05 (Second Patch for recipes)
 	# Disable Topics tracking if not enabled explicitly: https://github.com/jkarlin/topics
 	header ?Permissions-Policy "browsing-topics=()"
 
