@@ -1,5 +1,8 @@
-controller_security:
-    resource: ../src/Controller/SecurityController.php
+
+controllers:
+    resource:
+        path: ../src/Controller/
+        namespace: App\Controller
     type: attribute
 
 controllers_front:

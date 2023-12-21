@@ -1,0 +1,9 @@
+diff --git a/config/packages/vich_uploader.yaml b/config/packages/vich_uploader.yaml
+index 06d216a..32c852e 100644
+--- a/config/packages/vich_uploader.yaml
++++ b/config/packages/vich_uploader.yaml
+@@ -5,3 +5,4 @@ vich_uploader:
+     #    products:
+     #        uri_prefix: /images/products
+     #        upload_destination: '%kernel.project_dir%/public/images/products'
++    #        namer: Vich\UploaderBundle\Naming\SmartUniqueNamer
