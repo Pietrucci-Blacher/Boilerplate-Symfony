@@ -10,10 +10,22 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-#      - name: repo-sync
-#        uses: repo-sync/github-sync@v2
-#        with:
-#          source_repo: "https://github.com/dunglas/symfony-docker"
-#          source_branch: "main"
-#          destination_branch: "develop"
-#          github_token: ${{ secrets.TOKEN }}
+      - name: Sync upstream
+        id: sync
+        uses: aormsby/Fork-Sync-With-Upstream-action@v3.4
+        with:
+          target_sync_branch: develop
+          target_repo_token: ${{ secrets.TOKEN }}
+          upstream_sync_branch: main
+          upstream_sync_repo: dunglas/symfony-docker
+
+      - name: New commits found
+        if: steps.sync.outputs.has_new_commits == 'true'
+        run: echo "New commits were found to sync."
+
+      - name: No new commits
+        if: steps.sync.outputs.has_new_commits == 'false'
+        run: echo "There were no new commits."
+
+      - name: Show value of 'has_new_commits'
+        run: echo ${{ steps.sync.outputs.has_new_commits }}
