@@ -7342,7 +7342,15 @@
                 "dump"
             ],
             "support": {
+<<<<<<< HEAD
                 "source": "https://github.com/symfony/var-dumper/tree/v7.0.3"
+=======
+<<<<<<< HEAD
+                "source": "https://github.com/symfony/var-dumper/tree/v7.0.2"
+=======
+                "source": "https://github.com/symfony/var-dumper/tree/v7.0.0"
+>>>>>>> 3d84cc6 (Update dependency pentatrion/vite-bundle to v6)
+>>>>>>> b8dc8e6 (Update dependency pentatrion/vite-bundle to v6)
             },
             "funding": [
                 {
@@ -7432,7 +7440,11 @@
                     "type": "tidelift"
                 }
             ],
+<<<<<<< HEAD
             "time": "2024-01-23T15:02:46+00:00"
+=======
+            "time": "2023-11-30T11:38:21+00:00"
+>>>>>>> b8dc8e6 (Update dependency pentatrion/vite-bundle to v6)
         },
         {
             "name": "symfony/web-link",
