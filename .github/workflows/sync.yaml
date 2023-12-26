@@ -18,6 +18,7 @@ jobs:
           target_repo_token: ${{ secrets.GITHUB_TOKEN }}
           upstream_sync_branch: main
           upstream_sync_repo: dunglas/symfony-docker
+          test_mode: true
 
       - name: New commits found
         if: steps.sync.outputs.has_new_commits == 'true'
