@@ -18,6 +18,7 @@ services:
       timeout: 3s
       retries: 3
       start_period: 30s
+      test: ["CMD", "curl", "-f", "http://localhost/healthcheck"]
     environment:
       DATABASE_URL: postgresql://${POSTGRES_USER:-symfony}:${POSTGRES_PASSWORD:-ChangeMe}@database:5432/${POSTGRES_DB:-app}?serverVersion=${POSTGRES_VERSION:-13}
       # Run "composer require symfony/mercure-bundle" to install and configure the Mercure integration
