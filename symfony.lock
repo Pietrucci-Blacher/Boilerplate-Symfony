@@ -48,7 +48,7 @@
         ]
     },
     "pentatrion/vite-bundle": {
-        "version": "3.3",
+        "version": "6.3",
         "recipe": {
             "repo": "github.com/symfony/recipes-contrib",
             "branch": "main",
