@@ -2867,21 +2867,21 @@
                 "shasum": ""
             },
             "require": {
-                "php": ">=8.1",
+                "php": ">=8.2",
                 "symfony/deprecation-contracts": "^2.5|^3",
-                "symfony/filesystem": "^5.4|^6.0|^7.0",
+                "symfony/filesystem": "^6.4|^7.0",
                 "symfony/polyfill-ctype": "~1.8"
             },
             "conflict": {
-                "symfony/finder": "<5.4",
+                "symfony/finder": "<6.4",
                 "symfony/service-contracts": "<2.5"
             },
             "require-dev": {
-                "symfony/event-dispatcher": "^5.4|^6.0|^7.0",
-                "symfony/finder": "^5.4|^6.0|^7.0",
-                "symfony/messenger": "^5.4|^6.0|^7.0",
+                "symfony/event-dispatcher": "^6.4|^7.0",
+                "symfony/finder": "^6.4|^7.0",
+                "symfony/messenger": "^6.4|^7.0",
                 "symfony/service-contracts": "^2.5|^3",
-                "symfony/yaml": "^5.4|^6.0|^7.0"
+                "symfony/yaml": "^6.4|^7.0"
             },
             "type": "library",
             "autoload": {
@@ -3035,27 +3035,26 @@
                 "shasum": ""
             },
             "require": {
-                "php": ">=8.1",
+                "php": ">=8.2",
                 "psr/container": "^1.1|^2.0",
                 "symfony/deprecation-contracts": "^2.5|^3",
-                "symfony/service-contracts": "^2.5|^3.0",
-                "symfony/var-exporter": "^6.2.10|^7.0"
+                "symfony/service-contracts": "^3.3",
+                "symfony/var-exporter": "^6.4|^7.0"
             },
             "conflict": {
                 "ext-psr": "<1.1|>=2",
-                "symfony/config": "<6.1",
-                "symfony/finder": "<5.4",
-                "symfony/proxy-manager-bridge": "<6.3",
-                "symfony/yaml": "<5.4"
+                "symfony/config": "<6.4",
+                "symfony/finder": "<6.4",
+                "symfony/yaml": "<6.4"
             },
             "provide": {
                 "psr/container-implementation": "1.1|2.0",
                 "symfony/service-implementation": "1.1|2.0|3.0"
             },
             "require-dev": {
-                "symfony/config": "^6.1|^7.0",
-                "symfony/expression-language": "^5.4|^6.0|^7.0",
-                "symfony/yaml": "^5.4|^6.0|^7.0"
+                "symfony/config": "^6.4|^7.0",
+                "symfony/expression-language": "^6.4|^7.0",
+                "symfony/yaml": "^6.4|^7.0"
             },
             "type": "library",
             "autoload": {
@@ -7460,6 +7459,7 @@
         },
         {
             "name": "symfony/web-link",
+<<<<<<< HEAD
             "version": "v7.0.3",
             "source": {
                 "type": "git",
@@ -7470,6 +7470,18 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/web-link/zipball/855a347feb2ecfc1d1a379c739aff956d4cbec00",
                 "reference": "855a347feb2ecfc1d1a379c739aff956d4cbec00",
+=======
+            "version": "v7.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/web-link.git",
+                "reference": "378bcc80b48c51e32bf121bee684183ff879a62f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/web-link/zipball/378bcc80b48c51e32bf121bee684183ff879a62f",
+                "reference": "378bcc80b48c51e32bf121bee684183ff879a62f",
+>>>>>>> e4a6e02 (Update vite.js)
                 "shasum": ""
             },
             "require": {
@@ -7523,7 +7535,11 @@
                 "push"
             ],
             "support": {
+<<<<<<< HEAD
                 "source": "https://github.com/symfony/web-link/tree/v7.0.3"
+=======
+                "source": "https://github.com/symfony/web-link/tree/v7.0.0"
+>>>>>>> e4a6e02 (Update vite.js)
             },
             "funding": [
                 {
@@ -7539,6 +7555,7 @@
                     "type": "tidelift"
                 }
             ],
+<<<<<<< HEAD
             "time": "2024-01-23T15:02:46+00:00"
         },
         {
@@ -7553,6 +7570,22 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/yaml/zipball/2d4fca631c00700597e9442a0b2451ce234513d3",
                 "reference": "2d4fca631c00700597e9442a0b2451ce234513d3",
+=======
+            "time": "2023-07-25T09:50:29+00:00"
+        },
+        {
+            "name": "symfony/yaml",
+            "version": "v7.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/yaml.git",
+                "reference": "0055b230c408428b9b5cde7c55659555be5c0278"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/yaml/zipball/0055b230c408428b9b5cde7c55659555be5c0278",
+                "reference": "0055b230c408428b9b5cde7c55659555be5c0278",
+>>>>>>> e4a6e02 (Update vite.js)
                 "shasum": ""
             },
             "require": {
@@ -7594,7 +7627,11 @@
             "description": "Loads and dumps YAML files",
             "homepage": "https://symfony.com",
             "support": {
+<<<<<<< HEAD
                 "source": "https://github.com/symfony/yaml/tree/v7.0.3"
+=======
+                "source": "https://github.com/symfony/yaml/tree/v7.0.0"
+>>>>>>> e4a6e02 (Update vite.js)
             },
             "funding": [
                 {
@@ -7610,7 +7647,11 @@
                     "type": "tidelift"
                 }
             ],
+<<<<<<< HEAD
             "time": "2024-01-23T15:02:46+00:00"
+=======
+            "time": "2023-11-07T10:26:03+00:00"
+>>>>>>> e4a6e02 (Update vite.js)
         },
         {
             "name": "twig/extra-bundle",
@@ -9695,6 +9736,7 @@
         },
         {
             "name": "symfony/browser-kit",
+<<<<<<< HEAD
             "version": "v7.0.3",
             "source": {
                 "type": "git",
@@ -9705,6 +9747,18 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/browser-kit/zipball/725d5b15681685ac17b20b575254c75639722488",
                 "reference": "725d5b15681685ac17b20b575254c75639722488",
+=======
+            "version": "v7.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/browser-kit.git",
+                "reference": "c53a6e9bcb4528be535d458450b07aa81620459e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/browser-kit/zipball/c53a6e9bcb4528be535d458450b07aa81620459e",
+                "reference": "c53a6e9bcb4528be535d458450b07aa81620459e",
+>>>>>>> e4a6e02 (Update vite.js)
                 "shasum": ""
             },
             "require": {
@@ -9743,7 +9797,11 @@
             "description": "Simulates the behavior of a web browser, allowing you to make requests, click on links and submit forms programmatically",
             "homepage": "https://symfony.com",
             "support": {
+<<<<<<< HEAD
                 "source": "https://github.com/symfony/browser-kit/tree/v7.0.3"
+=======
+                "source": "https://github.com/symfony/browser-kit/tree/v7.0.0"
+>>>>>>> e4a6e02 (Update vite.js)
             },
             "funding": [
                 {
@@ -9759,6 +9817,7 @@
                     "type": "tidelift"
                 }
             ],
+<<<<<<< HEAD
             "time": "2024-01-23T15:02:46+00:00"
         },
         {
@@ -9773,6 +9832,22 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/css-selector/zipball/ec60a4edf94e63b0556b6a0888548bb400a3a3be",
                 "reference": "ec60a4edf94e63b0556b6a0888548bb400a3a3be",
+=======
+            "time": "2023-10-31T17:37:24+00:00"
+        },
+        {
+            "name": "symfony/css-selector",
+            "version": "v7.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/css-selector.git",
+                "reference": "bb51d46e53ef8d50d523f0c5faedba056a27943e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/css-selector/zipball/bb51d46e53ef8d50d523f0c5faedba056a27943e",
+                "reference": "bb51d46e53ef8d50d523f0c5faedba056a27943e",
+>>>>>>> e4a6e02 (Update vite.js)
                 "shasum": ""
             },
             "require": {
@@ -9808,7 +9883,11 @@
             "description": "Converts CSS selectors to XPath expressions",
             "homepage": "https://symfony.com",
             "support": {
+<<<<<<< HEAD
                 "source": "https://github.com/symfony/css-selector/tree/v7.0.3"
+=======
+                "source": "https://github.com/symfony/css-selector/tree/v7.0.0"
+>>>>>>> e4a6e02 (Update vite.js)
             },
             "funding": [
                 {
@@ -9824,6 +9903,7 @@
                     "type": "tidelift"
                 }
             ],
+<<<<<<< HEAD
             "time": "2024-01-23T15:02:46+00:00"
         },
         {
@@ -9838,6 +9918,22 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/debug-bundle/zipball/b0db5c443883ce5c10c2265c77feb9833c3d9d6d",
                 "reference": "b0db5c443883ce5c10c2265c77feb9833c3d9d6d",
+=======
+            "time": "2023-10-31T17:59:56+00:00"
+        },
+        {
+            "name": "symfony/debug-bundle",
+            "version": "v7.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/debug-bundle.git",
+                "reference": "7e540aebec5b7848bbdfaa1a045ed130e1791156"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/debug-bundle/zipball/7e540aebec5b7848bbdfaa1a045ed130e1791156",
+                "reference": "7e540aebec5b7848bbdfaa1a045ed130e1791156",
+>>>>>>> e4a6e02 (Update vite.js)
                 "shasum": ""
             },
             "require": {
@@ -9882,7 +9978,11 @@
             "description": "Provides a tight integration of the Symfony VarDumper component and the ServerLogCommand from MonologBridge into the Symfony full-stack framework",
             "homepage": "https://symfony.com",
             "support": {
+<<<<<<< HEAD
                 "source": "https://github.com/symfony/debug-bundle/tree/v7.0.3"
+=======
+                "source": "https://github.com/symfony/debug-bundle/tree/v7.0.0"
+>>>>>>> e4a6e02 (Update vite.js)
             },
             "funding": [
                 {
@@ -9898,6 +9998,7 @@
                     "type": "tidelift"
                 }
             ],
+<<<<<<< HEAD
             "time": "2024-01-23T15:02:46+00:00"
         },
         {
@@ -9912,6 +10013,22 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/dom-crawler/zipball/3330a8f836e7631412c5e07f69b88480d27a20a2",
                 "reference": "3330a8f836e7631412c5e07f69b88480d27a20a2",
+=======
+            "time": "2023-11-07T10:26:03+00:00"
+        },
+        {
+            "name": "symfony/dom-crawler",
+            "version": "v7.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/dom-crawler.git",
+                "reference": "d13205f444a535f4a6e52186aedbc99664f66a86"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/dom-crawler/zipball/d13205f444a535f4a6e52186aedbc99664f66a86",
+                "reference": "d13205f444a535f4a6e52186aedbc99664f66a86",
+>>>>>>> e4a6e02 (Update vite.js)
                 "shasum": ""
             },
             "require": {
@@ -9949,7 +10066,11 @@
             "description": "Eases DOM navigation for HTML and XML documents",
             "homepage": "https://symfony.com",
             "support": {
+<<<<<<< HEAD
                 "source": "https://github.com/symfony/dom-crawler/tree/v7.0.3"
+=======
+                "source": "https://github.com/symfony/dom-crawler/tree/v7.0.0"
+>>>>>>> e4a6e02 (Update vite.js)
             },
             "funding": [
                 {
@@ -9965,7 +10086,11 @@
                     "type": "tidelift"
                 }
             ],
+<<<<<<< HEAD
             "time": "2024-01-23T15:02:46+00:00"
+=======
+            "time": "2023-11-20T16:43:42+00:00"
+>>>>>>> e4a6e02 (Update vite.js)
         },
         {
             "name": "symfony/maker-bundle",
@@ -10061,6 +10186,7 @@
         },
         {
             "name": "symfony/phpunit-bridge",
+<<<<<<< HEAD
             "version": "v7.0.3",
             "source": {
                 "type": "git",
@@ -10071,6 +10197,18 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/phpunit-bridge/zipball/0a2eeb0d9e68bf01660e3e903f8113508bb46132",
                 "reference": "0a2eeb0d9e68bf01660e3e903f8113508bb46132",
+=======
+            "version": "v7.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/phpunit-bridge.git",
+                "reference": "92df075808c9437beca9540e25ae0c40eea1c061"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/phpunit-bridge/zipball/92df075808c9437beca9540e25ae0c40eea1c061",
+                "reference": "92df075808c9437beca9540e25ae0c40eea1c061",
+>>>>>>> e4a6e02 (Update vite.js)
                 "shasum": ""
             },
             "require": {
@@ -10122,7 +10260,11 @@
             "description": "Provides utilities for PHPUnit, especially user deprecation notices management",
             "homepage": "https://symfony.com",
             "support": {
+<<<<<<< HEAD
                 "source": "https://github.com/symfony/phpunit-bridge/tree/v7.0.3"
+=======
+                "source": "https://github.com/symfony/phpunit-bridge/tree/v7.0.2"
+>>>>>>> e4a6e02 (Update vite.js)
             },
             "funding": [
                 {
@@ -10138,6 +10280,7 @@
                     "type": "tidelift"
                 }
             ],
+<<<<<<< HEAD
             "time": "2024-01-23T15:02:46+00:00"
         },
         {
@@ -10152,6 +10295,22 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/web-profiler-bundle/zipball/320dbcaa6e3a72797a614216703df8b187f19265",
                 "reference": "320dbcaa6e3a72797a614216703df8b187f19265",
+=======
+            "time": "2023-12-19T11:23:03+00:00"
+        },
+        {
+            "name": "symfony/web-profiler-bundle",
+            "version": "v7.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/web-profiler-bundle.git",
+                "reference": "b3746379ad31d02a578aff360caacf521e753b85"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/web-profiler-bundle/zipball/b3746379ad31d02a578aff360caacf521e753b85",
+                "reference": "b3746379ad31d02a578aff360caacf521e753b85",
+>>>>>>> e4a6e02 (Update vite.js)
                 "shasum": ""
             },
             "require": {
@@ -10203,7 +10362,11 @@
                 "dev"
             ],
             "support": {
+<<<<<<< HEAD
                 "source": "https://github.com/symfony/web-profiler-bundle/tree/v7.0.3"
+=======
+                "source": "https://github.com/symfony/web-profiler-bundle/tree/v7.0.2"
+>>>>>>> e4a6e02 (Update vite.js)
             },
             "funding": [
                 {
@@ -10219,7 +10382,11 @@
                     "type": "tidelift"
                 }
             ],
+<<<<<<< HEAD
             "time": "2024-01-29T15:41:16+00:00"
+=======
+            "time": "2023-12-27T08:42:13+00:00"
+>>>>>>> e4a6e02 (Update vite.js)
         },
         {
             "name": "theseer/tokenizer",
@@ -10279,10 +10446,14 @@
     "prefer-lowest": false,
     "platform": {
 <<<<<<< HEAD
+<<<<<<< HEAD
         "php": ">=8.3",
 =======
         "php": ">=8.2",
 >>>>>>> a261fda (Remove pentatrion old packages and update composer.lock)
+=======
+        "php": ">=8.3",
+>>>>>>> e4a6e02 (Update vite.js)
         "ext-ctype": "*",
         "ext-iconv": "*"
     },
