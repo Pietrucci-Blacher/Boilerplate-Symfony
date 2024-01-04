@@ -1,6 +1,6 @@
 on:
   schedule:
-    - cron:  "0 0 * * */1"
+    - cron: "0 0 * * */1"
   workflow_dispatch:
 
 jobs:
@@ -13,7 +13,6 @@ jobs:
           ref: develop
           persist-credentials: false
 
-
       - name: Sync upstream
         id: sync
         uses: aormsby/Fork-Sync-With-Upstream-action@v3.4
@@ -22,7 +21,7 @@ jobs:
           target_repo_token: ${{ secrets.GITHUB_TOKEN }}
           upstream_sync_branch: main
           upstream_sync_repo: dunglas/symfony-docker
-          upstream_pull_args: '--allow-unrelated-histories’
+          upstream_pull_args: '--allow-unrelated-histories'
 
       - name: New commits found
         if: steps.sync.outputs.has_new_commits == 'true'
