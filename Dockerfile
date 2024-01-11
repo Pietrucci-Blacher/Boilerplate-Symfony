@@ -2,8 +2,6 @@
 
 # Versions
 FROM dunglas/frankenphp:1-alpine AS frankenphp_upstream
-FROM composer/composer:2-bin AS composer_upstream
-
 
 # The different stages of this Dockerfile are meant to be built into separate images
 # https://docs.docker.com/develop/develop-images/multistage-build/#stop-at-a-specific-build-stage
@@ -31,11 +29,15 @@ RUN apk add --no-cache \
 
 RUN set -eux; \
 	install-php-extensions \
+		@composer \
 		apcu \
 		intl \
 		opcache \
 		zip \
 	;
+
+# https://getcomposer.org/doc/03-cli.md#composer-allow-superuser
+ENV COMPOSER_ALLOW_SUPERUSER=1
 
 ###> recipes ###
 ###> doctrine/doctrine-bundle ###
