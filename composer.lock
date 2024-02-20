@@ -1896,20 +1896,20 @@
         },
         {
             "name": "pentatrion/vite-bundle",
-            "version": "v6.3.4",
+            "version": "v6.4.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/lhapaipai/vite-bundle.git",
-                "reference": "c46fa23e33064e087d178d79be9f117b411fff0c"
+                "reference": "d007143a488ef2e0f8b0b3d8a1c07ba54da66e11"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/lhapaipai/vite-bundle/zipball/c46fa23e33064e087d178d79be9f117b411fff0c",
-                "reference": "c46fa23e33064e087d178d79be9f117b411fff0c",
+                "url": "https://api.github.com/repos/lhapaipai/vite-bundle/zipball/d007143a488ef2e0f8b0b3d8a1c07ba54da66e11",
+                "reference": "d007143a488ef2e0f8b0b3d8a1c07ba54da66e11",
                 "shasum": ""
             },
             "require": {
-                "php": "^7.4 || ^8.0",
+                "php": "^8.0",
                 "symfony/asset": "^4.4 || ^5.0 || ^6.0 || ^7.0",
                 "symfony/config": "^4.4 || ^5.0 || ^6.0 || ^7.0",
                 "symfony/dependency-injection": "^4.4 || ^5.0 || ^6.0 || ^7.0",
@@ -1950,9 +1950,9 @@
             ],
             "support": {
                 "issues": "https://github.com/lhapaipai/vite-bundle/issues",
-                "source": "https://github.com/lhapaipai/vite-bundle/tree/v6.3.4"
+                "source": "https://github.com/lhapaipai/vite-bundle/tree/v6.4.3"
             },
-            "time": "2024-01-25T22:11:09+00:00"
+            "time": "2024-02-15T22:37:35+00:00"
         },
         {
             "name": "phpdocumentor/reflection-common",
