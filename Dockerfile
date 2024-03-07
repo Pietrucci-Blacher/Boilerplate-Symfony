@@ -1,7 +1,7 @@
 #syntax=docker/dockerfile:1.7
 
 # Versions
-FROM dunglas/frankenphp:1-alpine AS frankenphp_upstream
+FROM dunglas/frankenphp:1-php8.3 AS frankenphp_upstream
 
 # The different stages of this Dockerfile are meant to be built into separate images
 # https://docs.docker.com/develop/develop-images/multistage-build/#stop-at-a-specific-build-stage
@@ -17,6 +17,7 @@ WORKDIR /app
 COPY --from=mlocati/php-extension-installer:latest --link /usr/bin/install-php-extensions /usr/local/bin/
 
 # persistent / runtime deps
+<<<<<<< HEAD
 # hadolint ignore=DL3018
 RUN apk add --no-cache \
 		acl \
@@ -26,6 +27,15 @@ RUN apk add --no-cache \
         linux-headers \
         npm \
 	;
+=======
+# hadolint ignore=DL3008
+RUN apt-get update && apt-get install -y --no-install-recommends \
+	acl \
+	file \
+	gettext \
+	git \
+	&& rm -rf /var/lib/apt/lists/*
+>>>>>>> 48bd564 (feat: switch to Debian instead of Alpine)
 
 RUN set -eux; \
 	install-php-extensions \
