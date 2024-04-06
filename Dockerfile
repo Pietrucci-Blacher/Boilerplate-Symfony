@@ -36,8 +36,8 @@ ENV COMPOSER_ALLOW_SUPERUSER=1
 
 ###> recipes ###
 RUN apt-get update && apt-get install -y --no-install-recommends \
-        postgresql-server-dev-all \
-    && docker-php-ext-install -j$(nproc) pdo_pgsql \
+        postgresql-server-dev-all=258 \
+    && docker-php-ext-install -j"$(nproc)" pdo_pgsql \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 ###< recipes ###
