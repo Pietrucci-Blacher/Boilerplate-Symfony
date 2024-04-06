@@ -18,10 +18,6 @@
 /phpunit.xml
 ###< symfony/phpunit-bridge ###
 
-###> symfony/vich-uploader ###
-/public/upload/
-###< symfony/vich-uploader ###
-
 ###> MacOs gitignore ###
 .DS_Store
 .AppleDouble
