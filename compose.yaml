@@ -1,5 +1,3 @@
-version: "3.8"
-
 services:
   php:
     image: ${IMAGES_PREFIX:-}app-php
@@ -35,9 +33,7 @@ services:
       - target: 443
         published: ${HTTP3_PORT:-443}
         protocol: udp
-    depends_on:
-      - database
-
+  
   database:
     image: postgres:${POSTGRES_VERSION:-16}-alpine
     environment:
@@ -47,8 +43,10 @@ services:
     volumes:
       - db_data:/var/lib/postgresql/data:rw
 
+# Mercure is installed as a Caddy module, prevent the Flex recipe from installing another service
 ###> symfony/mercure-bundle ###
 ###< symfony/mercure-bundle ###
+
 volumes:
   caddy_data:
   caddy_config:

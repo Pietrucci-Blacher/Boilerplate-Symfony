@@ -1,5 +1,3 @@
-version: "3.8"
-
 # Development environment override
 services:
   php:
@@ -24,17 +22,3 @@ services:
 
 ###> symfony/mercure-bundle ###
 ###< symfony/mercure-bundle ###
-
-###> doctrine/doctrine-bundle ###
-  database:
-    ports:
-      - target: 5432
-        published: 5432
-        protocol: tcp
-###< doctrine/doctrine-bundle ###
-
-###> symfony/mailer ###
-  mailer:
-    image: schickling/mailcatcher
-    ports: [ "1025", "1080" ]
-###< symfony/mailer ###
