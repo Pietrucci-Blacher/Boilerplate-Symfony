@@ -1,7 +1,7 @@
 on:
-	push:
-		branches: 
-			- fix/debug-ci
+  push:
+    branches: 
+      - fix/debug-ci
   workflow_dispatch:
 
 jobs:
