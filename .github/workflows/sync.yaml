@@ -1,38 +1,38 @@
-on:
-  schedule:
-    - cron: "0 0 * * */1"
-  workflow_dispatch:
-  push:
-    branches:
-      - develop
+# on:
+#   schedule:
+#     - cron: "0 0 * * */1"
+#   workflow_dispatch:
+#   push:
+#     branches:
+#       - develop
 
-jobs:
-  repo-sync:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-        with:
-          ref: develop
-          persist-credentials: false
+# jobs:
+#   repo-sync:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: Checkout
+#         uses: actions/checkout@v4
+#         with:
+#           ref: develop
+#           persist-credentials: false
 
-      - name: Sync upstream
-        id: sync
-        uses: aormsby/Fork-Sync-With-Upstream-action@v3.4
-        with:
-          target_sync_branch: develop
-          target_repo_token: ${{ secrets.GITHUB_TOKEN }}
-          upstream_sync_branch: main
-          upstream_sync_repo: dunglas/symfony-docker
-          upstream_pull_args: '--allow-unrelated-histories'
+#       # - name: Sync upstream
+#       #   id: sync
+#       #   uses: aormsby/Fork-Sync-With-Upstream-action@v3.4
+#       #   with:
+#       #     target_sync_branch: develop
+#       #     target_repo_token: ${{ secrets.GITHUB_TOKEN }}
+#       #     upstream_sync_branch: main
+#       #     upstream_sync_repo: dunglas/symfony-docker
+#       #     upstream_pull_args: '--allow-unrelated-histories'
 
-      - name: New commits found
-        if: steps.sync.outputs.has_new_commits == 'true'
-        run: echo "New commits were found to sync."
+#       # - name: New commits found
+#       #   if: steps.sync.outputs.has_new_commits == 'true'
+#       #   run: echo "New commits were found to sync."
 
-      - name: No new commits
-        if: steps.sync.outputs.has_new_commits == 'false'
-        run: echo "There were no new commits."
+#       # - name: No new commits
+#       #   if: steps.sync.outputs.has_new_commits == 'false'
+#       #   run: echo "There were no new commits."
 
-      - name: Show value of 'has_new_commits'
-        run: echo ${{ steps.sync.outputs.has_new_commits }}
+#       # - name: Show value of 'has_new_commits'
+#       #   run: echo ${{ steps.sync.outputs.has_new_commits }}
